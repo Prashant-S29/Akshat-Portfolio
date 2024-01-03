@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  width: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html {
+  scroll-behavior: smooth;
+}
+
+.background-gradient-animation {
+  animation: scaleUpDown 3s alternate infinite;
+}
+
+@keyframes scaleUpDown {
+  0% {
+    scale: 0.8;
+  }
+  100% {
+    scale: 1.4;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navbar-animation{
+  animation: leftToRight 2s alternate infinite;
+}
+
+@keyframes leftToRight {
+  0%{
+    left: -50px;
+  }
+
+  100%{
+    left: 110%;
+  }
 }
