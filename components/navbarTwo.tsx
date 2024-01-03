@@ -61,7 +61,7 @@ const NAVBAR_TWO = () => {
           </ul>
         </div>
       </div>
-      <nav className="w-full h-[100px] backdrop-blur-[5px] sticky top-0 py-[10px] px-[10%]">
+      <nav className="w-full z-50 h-[100px] backdrop-blur-[5px] sticky top-0 py-[10px] px-[10%]">
         <div
           className="w-full h-full bg-white relative overflow-hidden  flex justify-between px-[20px] items-center rounded-[20px]
          shadow-[0_0px_30px_-15px_rgba(0,0,0,0.3)]"

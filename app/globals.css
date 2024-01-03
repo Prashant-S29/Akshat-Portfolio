@@ -23,16 +23,49 @@ html {
   }
 }
 
-.navbar-animation{
+.navbar-animation {
   animation: leftToRight 2s alternate infinite;
 }
 
 @keyframes leftToRight {
-  0%{
+  0% {
     left: -50px;
   }
 
-  100%{
+  100% {
     left: 110%;
+  }
+}
+
+.animate-bounceOne {
+  animation: bounceOne 3s alternate infinite;
+}
+
+@keyframes bounceOne {
+  0%,
+  100% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounceTwo {
+  animation: bounceTwo 3s alternate infinite;
+  rotate: -45deg;
+}
+
+@keyframes bounceTwo {
+  0%,
+  100% {
+    transform: translateY(5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
