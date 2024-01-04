@@ -14,11 +14,11 @@ const NAVBAR_MENU_D = () => {
     <>
       <div className="flex items-center">
         <div>
-          <ul className="flex gap-[6px] text-[14px]   p-[7px] rounded-full">
+          <ul className="flex gap-[6px] text-[14px] rounded-full">
             {navMenuLinks.map((navLinkDetail, index) => (
               <li
                 key={index}
-                className={`px-[18px] py-[6px] text-black font-semibold`}
+                className={`px-[18px] py-[6px] relative text-black font-semibold`}
                 onMouseEnter={() => {
                   setLineWidth(!lineWidth);
                 }}
@@ -34,7 +34,7 @@ const NAVBAR_MENU_D = () => {
                   {navLinkDetail.text}
                 </Link>
                 {pathName === navLinkDetail.href && (
-                  <div className=" flex justify-center">
+                  <div className="absolute flex justify-center left-[50%] -translate-x-[50%]">
                     <div
                       className={`  duration-300 w-[5px] aspect-square rounded-full bg-black`}
                     />
