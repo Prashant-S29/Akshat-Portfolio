@@ -13,7 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 const NAVBAR_TWO = () => {
   return (
     <>
-      <div className="flex justify-between mt-[10px] px-[12%]">
+      <div className="flex justify-between mt-[10px] px-[18%]">
         <div className="flex gap-3">
           <div className="flex gap-1 items-center">
             <div>
@@ -61,14 +61,14 @@ const NAVBAR_TWO = () => {
           </ul>
         </div>
       </div>
-      <nav className="w-full z-50 h-[90px] sticky top-0  px-[10%]">
+      <nav className="w-full z-50 h-[90px]  sticky py-[10px]  top-0  px-[16%]">
         <div
-          className="w-full h-full  relative overflow-hidden  flex justify-between px-[20px] items-center rounded-[20px]
-         "
+          className="w-full h-full  relative overflow-hidden bg-white  flex justify-between px-[20px]
+           items-center rounded-[20px] shadow-[0_0px_40px_-15px_rgba(0,0,0,0.3)]"
         >
           {/* <div className="absolute w-[30px] -rotate-[25deg] h-[110px] navbar-animation bg-gray-200"></div> */}
           <div className="z-10">
-            <span className="font-black text-black dark:text-white text-[24px]">
+            <span className="font-black text-black  text-[24px]">
               A<span className="text-red-500">.</span>K
             </span>
           </div>
@@ -78,8 +78,8 @@ const NAVBAR_TWO = () => {
           <div className="z-10">
             <Link href="/contact" tabIndex={-1}>
               <button
-                className="px-[20px] py-[11px] duration-200 ring-1 ring-[#2662fa]  hover:bg-[#2662fa] bg-white
-                   hover:text-white text-[#2662fa] dark:bg-[#2662fa] dark:text-white  rounded-full text-[13px] font-semibold outline-none"
+                className="px-[20px] py-[10px] duration-200 ring-1 ring-[#2662fa]  bg-[#2662fa]
+                   hover:text-white text-[#ffffff] dark:text-white  rounded-[14px] text-[13px] font-semibold outline-none"
                 tabIndex={-1}
               >
                 Contact

@@ -1,29 +1,30 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-
-import ThemeSwitcher from "@/clientComponents/themeChanger";
 
 import { navMenuLinks } from "@/contants";
 
 const NAVBAR_MENU_D = () => {
   const pathName = usePathname();
-// bg-[#2662fa]
+  const [lineWidth, setLineWidth] = useState(false);
+
   return (
     <>
       <div className="flex items-center">
         <div>
-          <ul className="flex gap-[6px] text-[13px] bg-gradient-to-r from-[#2662fa]  to-purple-600  p-[7px] rounded-full">
+          <ul className="flex gap-[6px] text-[14px]   p-[7px] rounded-full">
             {navMenuLinks.map((navLinkDetail, index) => (
               <li
                 key={index}
-                className={`px-[18px] py-[6px] ${
-                  pathName === navLinkDetail.href
-                    ? "bg-[#ffffff] text-black "
-                    : "hover:bg-[#ffffff]  hover:text-black text-white"
-                }  duration-200 rounded-full font-semibold `}
+                className={`px-[18px] py-[6px] text-black font-semibold`}
+                onMouseEnter={() => {
+                  setLineWidth(!lineWidth);
+                }}
+                onMouseLeave={() => {
+                  setLineWidth(!lineWidth);
+                }}
               >
                 <Link
                   href={navLinkDetail.href}
@@ -32,12 +33,17 @@ const NAVBAR_MENU_D = () => {
                 >
                   {navLinkDetail.text}
                 </Link>
+                {pathName === navLinkDetail.href && (
+                  <div className=" flex justify-center">
+                    <div
+                      className={`  duration-300 w-[5px] aspect-square rounded-full bg-black`}
+                    />
+                  </div>
+                )}
               </li>
             ))}
           </ul>
         </div>
-        
-        
       </div>
     </>
   );

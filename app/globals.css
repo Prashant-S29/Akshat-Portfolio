@@ -6,18 +6,24 @@
   width: 0;
 }
 
-::selection{
+::selection {
   color: white;
   background-color: plum;
 }
 
 html {
   scroll-behavior: smooth;
-  /* user-select: ; */
 }
 
 .background-gradient-animation {
   animation: scaleUpDown 3s alternate infinite;
+}
+
+.mainText-gradient {
+  background: -webkit-linear-gradient(360deg, #001aff, #ff00d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes scaleUpDown {

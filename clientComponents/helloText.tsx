@@ -31,7 +31,7 @@ const HELLO_TEXT = () => {
           setPause(false);
         }, 2000);
       }
-    }, 300);
+    }, 200);
 
     return () => {
       clearInterval(interval);

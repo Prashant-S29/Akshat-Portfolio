@@ -17,7 +17,7 @@ const MAIN_TEXT = () => {
         </div>
         <div className="relative">
           <div>
-            <span className="font-black text-[40px]">Akshat Khandelwal</span>
+            <span className="font-black text-[40px] text-[#001aff] dark:text-[#ff00d4]">Akshat Khandelwal</span>
           </div>
           <div className="absolute -z-10">
             <Image

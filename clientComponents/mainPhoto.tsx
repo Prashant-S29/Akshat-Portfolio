@@ -74,7 +74,7 @@ const MAIN_PHOTO = () => {
         <div
           className={`absolute  w-[100px] aspect-square rounded-full ${
             showImageProps
-              ? "-right-[30px] top-[80px] animate-bounceOne "
+              ? "-right-[30px] top-[80px]  "
               : "right-[10px] top-[150px]"
           } bg-blue-500 -z-10 duration-300`}
         />
@@ -116,7 +116,7 @@ const MAIN_PHOTO = () => {
         <div
           className={`absolute w-[130px]  aspect-square -z-10 ${
             showImageProps
-              ? "top-[30px] -ml-[80px]  animate-bounceTwo"
+              ? "top-[30px] -ml-[80px] -rotate-45 "
               : "top-[66px] ml-0"
           } duration-300 rounded-tl-full 
           rounded-br-[20px]`}
