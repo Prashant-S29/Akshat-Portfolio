@@ -5,11 +5,13 @@ import mindImage from "./photos/mind.png"
 import bodyImage from "./photos/body.png"
 import mindInside from "./photos/mindInside.png"
 
+import lineStroke from "./icons/line.png"
 
 export {
     prashant_img,
     designOne,
     mindImage,
     bodyImage,
-    mindInside
+    mindInside,
+    lineStroke
 }

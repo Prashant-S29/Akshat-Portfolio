@@ -1,24 +1,17 @@
 import React from "react";
 import Image from "next/image";
+
 import MAIN_PHOTO from "@/clientComponents/mainPhoto";
+import MAIN_TEXT from "@/components/mainText";
 
 const HOME = () => {
   return (
     <>
-      <div className="w-full min-h-[100vh] flex justify-evenly mt-[50px] px-[20px] ">
-        <div className="text-[30px] leading-tight">
-          <div>
-            <span className="font-black">Hola, I am</span>
-          </div>
-          <div>
-            <span>Akshat Khandelwal</span>
-          </div>
-          <div></div>
-          <div>
-            <span>Entrepreneur / Product Manager / Tech & B2C Builder</span>
-          </div>
+      <div className="w-full min-h-screen">
+        <div className="w-full  flex justify-evenly items-center mt-[50px] px-[20px] ">
+          <MAIN_TEXT />
+          <MAIN_PHOTO />
         </div>
-        <MAIN_PHOTO />
       </div>
     </>
   );
