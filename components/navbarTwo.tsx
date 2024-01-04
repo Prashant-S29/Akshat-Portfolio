@@ -61,14 +61,14 @@ const NAVBAR_TWO = () => {
           </ul>
         </div>
       </div>
-      <nav className="w-full z-50 h-[100px] backdrop-blur-[5px] sticky top-0 py-[10px] px-[10%]">
+      <nav className="w-full z-50 h-[90px] sticky top-0  px-[10%]">
         <div
-          className="w-full h-full bg-white relative overflow-hidden  flex justify-between px-[20px] items-center rounded-[20px]
-         shadow-[0_0px_30px_-15px_rgba(0,0,0,0.3)]"
+          className="w-full h-full  relative overflow-hidden  flex justify-between px-[20px] items-center rounded-[20px]
+         "
         >
           {/* <div className="absolute w-[30px] -rotate-[25deg] h-[110px] navbar-animation bg-gray-200"></div> */}
           <div className="z-10">
-            <span className="font-black text-black text-[24px]">
+            <span className="font-black text-black dark:text-white text-[24px]">
               A<span className="text-red-500">.</span>K
             </span>
           </div>
@@ -78,7 +78,7 @@ const NAVBAR_TWO = () => {
           <div className="z-10">
             <Link href="/contact" tabIndex={-1}>
               <button
-                className="px-[20px] py-[11px] duration-200 ring-1 ring-[#2662fa]  hover:bg-[#2662fa]
+                className="px-[20px] py-[11px] duration-200 ring-1 ring-[#2662fa]  hover:bg-[#2662fa] bg-white
                    hover:text-white text-[#2662fa] dark:bg-[#2662fa] dark:text-white  rounded-full text-[13px] font-semibold outline-none"
                 tabIndex={-1}
               >

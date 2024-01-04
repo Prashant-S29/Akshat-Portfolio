@@ -43,7 +43,7 @@ const HELLO_TEXT = () => {
         {helloText.map((text, index) => (
           <div
             key={index}
-            className={`${activeText === index ? "block" : "hidden"} w-[170px]`}
+            className={`${activeText === index ? "block" : "hidden"}`}
           >
             <span className="font-black">{text},</span>
           </div>

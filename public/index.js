@@ -7,11 +7,14 @@ import mindInside from "./photos/mindInside.png"
 
 import lineStroke from "./icons/line.png"
 
+import background from "./icons/background.png"
+
 export {
     prashant_img,
     designOne,
     mindImage,
     bodyImage,
     mindInside,
-    lineStroke
+    lineStroke,
+    background
 }

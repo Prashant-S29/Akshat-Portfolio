@@ -79,11 +79,11 @@ const MAIN_PHOTO = () => {
           } bg-blue-500 -z-10 duration-300`}
         />
         <div className="absolute  bottom-[70px]">
-          <div
+          {/* <div
             className={`absolute w-[10px] aspect-square bg-red-500 rounded-full ${
               showImageProps ? "" : "animate-ping"
             }`}
-          />
+          /> */}
           <button
             className="px-[15px] py-[8px] text-[13px] font-semibold text-white 
           bg-gradient-to-r from-blue-500 to-blue-700 rounded-full outline-none"

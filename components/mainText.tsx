@@ -8,7 +8,7 @@ import TYPER from "@/clientComponents/typer";
 const MAIN_TEXT = () => {
   return (
     <>
-      <div className="text-[30px] leading-tight">
+      <div className="text-[30px]  leading-tight">
         <div>
           <HELLO_TEXT />
           <div>
