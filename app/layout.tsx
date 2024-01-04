@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import NAVBAR from "@/components/navbar";
@@ -10,6 +10,7 @@ import ThemeSwitcher from "@/clientComponents/themeChanger";
 import NAVBAR_TWO from "@/components/navbarTwo";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+export const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akshat's Portfolio",

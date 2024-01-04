@@ -6,6 +6,7 @@ import bodyImage from "./photos/body.png"
 import mindInside from "./photos/mindInside.png"
 
 import lineStroke from "./icons/line.png"
+import bulbImage from "./icons/bulb.png"
 
 import background from "./icons/background.png"
 
@@ -16,5 +17,6 @@ export {
     bodyImage,
     mindInside,
     lineStroke,
-    background
+    background,
+    bulbImage
 }

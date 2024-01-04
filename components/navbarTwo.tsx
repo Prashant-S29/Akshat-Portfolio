@@ -40,22 +40,22 @@ const NAVBAR_TWO = () => {
           <ul className="flex gap-3 ">
             <li>
               <Link href="">
-                <FacebookIcon className="text-[24px] hover:text-blue-800 dark:hover:text-white duration-300" />
+                <FacebookIcon className="text-[24px] duration-300" />
               </Link>
             </li>
             <li>
               <Link href="">
-                <LinkedInIcon className="text-[24px] hover:text-blue-800 dark:hover:text-white duration-300" />
+                <LinkedInIcon className="text-[24px] duration-300" />
               </Link>
             </li>
             <li>
               <Link href="">
-                <TwitterIcon className="text-[24px] hover:text-blue-800 dark:hover:text-white duration-300" />
+                <TwitterIcon className="text-[24px] duration-300" />
               </Link>
             </li>
             <li>
               <Link href="">
-                <InstagramIcon className="text-[24px] hover:text-blue-800 dark:hover:text-white duration-300" />
+                <InstagramIcon className="text-[24px] duration-300" />
               </Link>
             </li>
           </ul>
