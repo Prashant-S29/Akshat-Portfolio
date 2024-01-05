@@ -13,7 +13,7 @@ const navMenuLinks: { href: string; text: string }[] = [
   },
   {
     href: "/academic-cv",
-    text: "Academic CV",
+    text: "Academic",
   },
   {
     href: "/blogs",

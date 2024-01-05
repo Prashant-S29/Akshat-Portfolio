@@ -1,12 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
-
-import { bulbImage } from "@/public";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { bulbImage } from "@/public";
+
+import ThemeSwitcher from "@/clientComponents/themeChanger";
+
 const HERO_TEXT = () => {
-  const [bulbOn, setBulbOn] = useState(false);
+  const [showText, setShowText] = useState(0);
+
+  useEffect(() => {
+    const updateTextAuto = () => {
+      if (showText === 140) {
+        setShowText(0);
+        return;
+      }
+      setShowText((showText) => showText + 70);
+    };
+    const interval = setInterval(() => {
+      updateTextAuto();
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [showText]);
 
   return (
     <>
@@ -14,8 +30,8 @@ const HERO_TEXT = () => {
         <div className={` text-center text-[60px] font-black leading-tight`}>
           <div className="relative flex justify-center">
             <div
-              className="mainText-gradient bg-gradient-to-r
-              from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9]  "
+              className=" mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9]"
             >
               <span>The Future</span>
             </div>
@@ -23,40 +39,54 @@ const HERO_TEXT = () => {
               <Image
                 src={bulbImage}
                 alt="bulbImage"
-                className={`w-[70px] ${bulbOn ? "grayscale-0" : "grayscale"}`}
+                className={`w-[70px] grayscale-0 dark:grayscale`}
               />
               <div
-                className={`w-[30px]  absolute rounded-full duration-300 -z-20 mt-[10px] blur-md aspect-square ${
-                  bulbOn ? "bg-yellow-400" : "bg-white"
-                }`}
+                className={`w-[30px]  absolute rounded-full duration-300 -z-20 mt-[10px] blur-md aspect-square
+                 bg-yellow-400 dark:bg-[#00000003]`}
               />
             </div>
-            <div
-              className="absolute ml-[450px] mt-[20px]"
-              onClick={() => {
-                setBulbOn(!bulbOn);
-              }}
-            >
-              <div
-                className={`w-[40px] h-[20px] rounded-full cursor-pointer flex ${
-                  bulbOn ? "pl-[24px] bg-green-500" : "pl-[4px] bg-gray-500"
-                } p-[4px] duration-300`}
-              >
-                <div className="w-[12px] aspect-square  rounded-full bg-white" />
-              </div>
+            <div className="absolute ml-[450px] mt-[20px]">
+              <ThemeSwitcher />
             </div>
           </div>
           <div
-            className="mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9] "
+            className=" mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9]"
           >
             <span>Belongs to Those </span>
           </div>
-          <div
-            className="mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9] "
-          >
-            <span>who Learn</span>
+          <div className="flex gap-[30px] justify-center  mt-[5px]">
+            <div
+              className=" mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9]"
+            >
+              <span>who</span>
+            </div>
+            <div className="text-left h-[76px] overflow-hidden">
+              <div
+                className={`-translate-y-[${showText}px] duration-200 dark:text-[#5900ff] text-[#e11d48]`}
+              >
+                <div
+                  className="h-[70px] mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
+                >
+                  <span>Explore!</span>
+                </div>
+                <div
+                  className="h-[70px] mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
+                >
+                  <span>Learn!</span>
+                </div>
+                <div
+                  className="h-[70px] mainText-gradient bg-gradient-to-r
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
+                >
+                  <span>Innovate!</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-[20px] font-medium text-center leading-tight">

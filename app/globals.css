@@ -10,17 +10,6 @@ html {
   user-select: none;
 }
 
-.background-gradient-animation {
-  animation: scaleUpDown 3s alternate infinite;
-}
-
-.cOne {
-  color: palegoldenrod;
-}
-
-.cTwo {
-  color: aqua;
-}
 .mainText-gradient {
   -webkit-background-clip: text;
   background-clip: text;
@@ -29,24 +18,7 @@ html {
   animation: textShine 5s ease-in-out infinite alternate;
 }
 
-.mainText-gradient {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* text-fill-color: transparent; */
-  background-size: 500% auto;
-  animation: textShine 7s ease-in-out infinite alternate;
-}
-
-.button-gradient {
-  background: linear-gradient(
-    to right,
-    #7953cd 20%,
-    #004ffa 30%,
-    #0190cd 70%,
-    #764ada 80%,
-    #ff00ea 100%
-  );
+.tagText-gradient {
   background-size: 500% auto;
   animation: textShine 5s ease-in-out infinite alternate;
 }
@@ -60,21 +32,22 @@ html {
   }
 }
 
-/* .mainText-gradient {
+.nameText-gradient {
+  -webkit-background-clip: text;
   background-clip: text;
--webkit-background-clip: text;
-color: transparent;
-  background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjF9');
-} */
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+}
 
-@keyframes scaleUpDown {
-  0% {
-    scale: 0.8;
-  }
-  100% {
-    scale: 1.4;
-  }
+.navbarMenu-gradient {
+  background: linear-gradient(
+    45deg,
+    #7953cd,
+    #004ffa,
+    #0190cd,
+    #764ada,
+    #ff00ea
+  );
 }
 
 .navbar-animation {
@@ -91,35 +64,3 @@ color: transparent;
   }
 }
 
-.animate-bounceOne {
-  animation: bounceOne 3s alternate infinite;
-}
-
-@keyframes bounceOne {
-  0%,
-  100% {
-    transform: translateY(-15%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0%);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-
-.animate-bounceTwo {
-  animation: bounceTwo 3s alternate infinite;
-  rotate: -45deg;
-}
-
-@keyframes bounceTwo {
-  0%,
-  100% {
-    transform: translateY(5%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(-15%);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}

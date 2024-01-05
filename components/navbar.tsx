@@ -1,15 +1,20 @@
-import NAVBAR_MENU_D from "@/clientComponents/navbarMenuDesktop";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
+import NAVBAR_MENU_D from "@/clientComponents/navbarMenuDesktop";
 
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
-const NAVBAR = () => {
+const NAVBAR_TWO = () => {
   return (
     <>
-      <nav className="w-full p-[20px] sticky top-0 backdrop-blur-sm">
-        <div className="flex justify-center gap-[20px]">
+      <div className="flex justify-between mt-[10px] px-[18%]">
+        <div className="flex gap-3">
           <div className="flex gap-1 items-center">
             <div>
               <EmailRoundedIcon className="text-black dark:text-white  text-[20px]" />
@@ -31,33 +36,60 @@ const NAVBAR = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-[10px]">
-          <div className="flex justify-evenly gap-[60px] items-center w-full">
-            <div>
-              <span className="font-black text-[24px]">
-                A<span className="text-red-500">.</span>K
-              </span>
-            </div>
-            <div className="ml-[30px]">
-              <NAVBAR_MENU_D />
-            </div>
-
-            <div>
-              <Link href="/contact" tabIndex={-1}>
-                <button
-                  className="px-[20px] py-[11px] duration-200 ring-1 ring-[#2662fa]  hover:bg-[#2662fa]
-                   hover:text-white text-[#2662fa] dark:bg-[#2662fa] dark:text-white  rounded-full text-[13px] font-semibold outline-none"
-                  tabIndex={-1}
-                >
-                  Contact
-                </button>
+        <div>
+          <ul className="flex gap-3 ">
+            <li>
+              <Link href="">
+                <FacebookIcon className="text-[24px] duration-300" />
               </Link>
-            </div>
+            </li>
+            <li>
+              <Link href="">
+                <LinkedInIcon className="text-[24px] duration-300" />
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <TwitterIcon className="text-[24px] duration-300" />
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <InstagramIcon className="text-[24px] duration-300" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav className="w-full z-50 h-[80px]  sticky  top-0  px-[16%]">
+        <div
+          className="w-full h-full  relative overflow-hidden bg-[#ffffff3a] dark:bg-[#1a24413a] backdrop-blur-[7px] flex justify-between px-[20px]
+           items-center rounded-[20px] "
+          //  shadow-[0_0px_40px_-15px_rgba(0,0,0,0.4)]
+        >
+          <div className="z-10">
+            <span className="font-black text-black dark:text-white  text-[24px]">
+              A<span className="text-red-500">.</span>K
+            </span>
           </div>
+          <div className="z-10">
+            <NAVBAR_MENU_D />
+          </div>
+          <div className="z-10">
+            <Link href="/contact" tabIndex={-1}>
+              <button
+                className="px-[20px] py-[10px] duration-200   bg-[#2662fa]
+                   hover:text-white text-[#ffffff] dark:text-white  rounded-[14px] text-[13px] font-semibold outline-none"
+                tabIndex={-1}
+              >
+                Contact
+              </button>
+            </Link>
+          </div>{" "}
         </div>
       </nav>
     </>
   );
 };
 
-export default NAVBAR;
+export default NAVBAR_TWO;

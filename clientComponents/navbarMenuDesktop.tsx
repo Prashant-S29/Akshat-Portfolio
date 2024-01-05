@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 import { navMenuLinks } from "@/contants";
 
 const NAVBAR_MENU_D = () => {
@@ -19,11 +21,11 @@ const NAVBAR_MENU_D = () => {
               <li key={index}>
                 <Link
                   href={navLinkDetail.href}
-                  className={`px-[18px] py-[6px] ${
+                  className={`px-[18px] py-[6px] rounded-full relative ${
                     pathName === navLinkDetail.href
-                      ? "bg-white "
-                      : " text-white font-medium hover:bg-[#ffffff] hover:text-black"
-                  } rounded-full relative  text-black font-semibold duration-300`}
+                      ? "text-black"
+                      : "text-white"
+                  }  text-black font-semibold duration-200`}
                   onMouseEnter={() => {
                     setLineWidth(!lineWidth);
                   }}
@@ -32,7 +34,13 @@ const NAVBAR_MENU_D = () => {
                   }}
                   tabIndex={-1}
                 >
-                  {navLinkDetail.text}
+                  {pathName === navLinkDetail.href && (
+                    <motion.div
+                      layoutId="active-link"
+                      className="bg-white inset-0 rounded-full w-full absolute"
+                    />
+                  )}
+                  <span className="relative z-10">{navLinkDetail.text}</span>
                 </Link>
               </li>
             ))}

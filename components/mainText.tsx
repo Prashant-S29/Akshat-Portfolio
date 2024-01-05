@@ -17,7 +17,13 @@ const MAIN_TEXT = () => {
         </div>
         <div className="relative">
           <div>
-            <span className="font-black text-[40px] text-[#001aff] dark:text-[#ff00d4]">Akshat Khandelwal</span>
+            <span className="font-black text-[40px] text-[#001aff] dark:text-[#ff00d4]">
+              Akshat Khandelwal
+            </span>
+            {/* <span className="font-black text-[40px] bg-gradient-to-tr from-[#001aff] dark:from-[#47f8c9] to-purple-500
+            dark:to-pink-500 nameText-gradient">
+              Akshat Khandelwal */}
+            {/* </span> */}
           </div>
           <div className="absolute -z-10">
             <Image
