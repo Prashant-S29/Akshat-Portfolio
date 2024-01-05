@@ -66,7 +66,6 @@ const NAVBAR_TWO = () => {
           className="w-full h-full  relative overflow-hidden bg-white dark:bg-[#1a2441]  flex justify-between px-[20px]
            items-center rounded-[20px] shadow-[0_0px_40px_-15px_rgba(0,0,0,0.4)]"
         >
-          {/* <div className="absolute w-[30px] -rotate-[25deg] h-[110px] navbar-animation bg-gray-200"></div> */}
           <div className="z-10">
             <span className="font-black text-black dark:text-white  text-[24px]">
               A<span className="text-red-500">.</span>K

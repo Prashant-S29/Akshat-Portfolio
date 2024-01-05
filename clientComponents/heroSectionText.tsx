@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 
-import { spaceGrotesk } from "@/app/layout";
 import { bulbImage } from "@/public";
 import Image from "next/image";
 
@@ -16,7 +15,7 @@ const HERO_TEXT = () => {
           <div className="relative flex justify-center">
             <div
               className="mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff] dark:via-[#ba6bff] to-[#000000] dark:to-[#ff35ee] "
+              from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9]  "
             >
               <span>The Future</span>
             </div>
@@ -49,13 +48,13 @@ const HERO_TEXT = () => {
           </div>
           <div
             className="mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff] dark:via-[#ba6bff] to-[#000000] dark:to-[#ff35ee] "
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9] "
           >
             <span>Belongs to Those </span>
           </div>
           <div
             className="mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff] dark:via-[#ba6bff] to-[#000000] dark:to-[#ff35ee] "
+             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000] to-[120%] dark:to-[#47f8c9] "
           >
             <span>who Learn</span>
           </div>
