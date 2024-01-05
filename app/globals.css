@@ -6,25 +6,67 @@
   width: 0;
 }
 
-::selection {
-  color: white;
-  background-color: plum;
-}
-
 html {
-  scroll-behavior: smooth;
+  user-select: none;
 }
 
 .background-gradient-animation {
   animation: scaleUpDown 3s alternate infinite;
 }
 
+.cOne {
+  color: palegoldenrod;
+}
+
+.cTwo {
+  color: aqua;
+}
 .mainText-gradient {
-  background: -webkit-linear-gradient(360deg, #001aff, #ff00d4);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
+
+.mainText-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-fill-color: transparent; */
+  background-size: 500% auto;
+  animation: textShine 7s ease-in-out infinite alternate;
+}
+
+.button-gradient {
+  background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #004ffa 30%,
+    #0190cd 70%,
+    #764ada 80%,
+    #ff00ea 100%
+  );
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* .mainText-gradient {
+  background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjF9');
+} */
 
 @keyframes scaleUpDown {
   0% {

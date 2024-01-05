@@ -14,32 +14,26 @@ const NAVBAR_MENU_D = () => {
     <>
       <div className="flex items-center">
         <div>
-          <ul className="flex gap-[6px] text-[14px] rounded-full">
+          <ul className="flex gap-[6px] text-[13px] bg-[#2662fa]  py-[10px] px-[7px] rounded-full">
             {navMenuLinks.map((navLinkDetail, index) => (
-              <li
-                key={index}
-                className={`px-[18px] py-[6px] relative text-black font-semibold`}
-                onMouseEnter={() => {
-                  setLineWidth(!lineWidth);
-                }}
-                onMouseLeave={() => {
-                  setLineWidth(!lineWidth);
-                }}
-              >
+              <li key={index}>
                 <Link
                   href={navLinkDetail.href}
-                  className="outline-none"
+                  className={`px-[18px] py-[6px] ${
+                    pathName === navLinkDetail.href
+                      ? "bg-white "
+                      : " text-white font-medium hover:bg-[#ffffff] hover:text-black"
+                  } rounded-full relative  text-black font-semibold duration-300`}
+                  onMouseEnter={() => {
+                    setLineWidth(!lineWidth);
+                  }}
+                  onMouseLeave={() => {
+                    setLineWidth(!lineWidth);
+                  }}
                   tabIndex={-1}
                 >
                   {navLinkDetail.text}
                 </Link>
-                {pathName === navLinkDetail.href && (
-                  <div className="absolute flex justify-center left-[50%] -translate-x-[50%]">
-                    <div
-                      className={`  duration-300 w-[5px] aspect-square rounded-full bg-black`}
-                    />
-                  </div>
-                )}
               </li>
             ))}
           </ul>
