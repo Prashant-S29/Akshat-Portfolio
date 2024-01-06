@@ -1,20 +1,12 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
 
 import { bulbImage } from "@/public";
 
 import ThemeSwitcher from "@/clientComponents/themeChanger";
+import VERTICAL_SLIDE from "../clientComponents/verticalSlideText";
 
 const HERO_TEXT = () => {
-
   return (
     <>
       <div>
@@ -47,40 +39,16 @@ const HERO_TEXT = () => {
           >
             <span>Belongs to Those </span>
           </div>
-          <div className="flex gap-[30px] justify-center  mt-[5px]">
+          <div className="flex gap-[30px] ml-[100px] justify-center  mt-[5px]">
             <div
               className=" mainText-gradient bg-gradient-to-r
              from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9]"
             >
               <span>who</span>
             </div>
-            <div className="text-left h-[76px] overflow-hidden">
-              <Swiper
-                slidesPerView={1}
-                modules={[Autoplay]}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                className="w-[320px]"
-              >
-                <SwiperSlide>
-                  <div className="mainText-gradient bg-gradient-to-r from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
-                    <span>Explore!</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="mainText-gradient bg-gradient-to-r  from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
-                    <span>Learn!</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="mainText-gradient bg-gradient-to-r  from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
-                    <span>Innovate!</span>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
+            <div className="text-left">
+              <div></div>
+              <VERTICAL_SLIDE textArr={["Learn!", "Explore!", "Innovate!"]} />
             </div>
           </div>
         </div>

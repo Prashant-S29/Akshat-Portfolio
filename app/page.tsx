@@ -7,7 +7,7 @@ import MAIN_PHOTO from "@/clientComponents/mainPhoto";
 import MAIN_TEXT from "@/components/mainText";
 
 import { background } from "@/public";
-import HERO_TEXT from "@/clientComponents/heroSectionText";
+import HERO_TEXT from "@/components/heroSectionText";
 
 const HOME = () => {
   useEffect(() => {
