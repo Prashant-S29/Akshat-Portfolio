@@ -4,11 +4,6 @@ import React, { useEffect, useState } from "react";
 
 const VERTICAL_SLIDE = ({ textArr }: { textArr: string[] }) => {
   const [showText, setShowText] = useState(0);
-
-  window.onload = () => {
-    setShowText(75);
-  };
-
   useEffect(() => {
     const updateShowText = () => {
       if (showText === (textArr.length - 1) * 75) {
