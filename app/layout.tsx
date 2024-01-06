@@ -5,6 +5,7 @@ import "./globals.css";
 import FOOTER from "@/components/footer";
 
 import Theme_Provider from "@/clientComponents/themeProvider";
+import ThemeSwitcherTwo from "@/clientComponents/themeChangerTwo";
 import NAVBAR_TWO from "@/components/navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${montserrat.className} bg-white dark:bg-[#0f051d] text-black dark:text-white`}
       >
         <Theme_Provider>
+          <ThemeSwitcherTwo/>
           <div>
             <NAVBAR_TWO />
             {children}

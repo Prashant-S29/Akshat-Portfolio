@@ -13,7 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 const NAVBAR_TWO = () => {
   return (
     <>
-      <div className="flex justify-between mt-[10px] px-[18%]">
+      <div className="flex justify-between mt-[10px] pb-[10px] px-[18%]">
         <div className="flex gap-3">
           <div className="flex gap-1 items-center">
             <div>
@@ -63,9 +63,7 @@ const NAVBAR_TWO = () => {
       </div>
       <nav className="w-full z-50 h-[80px]  sticky  top-0  px-[16%]">
         <div
-          className="w-full h-full  relative overflow-hidden bg-[#ffffff3a] dark:bg-[#1a24413a] backdrop-blur-[7px] flex justify-between px-[20px]
-           items-center rounded-[20px] "
-          //  shadow-[0_0px_40px_-15px_rgba(0,0,0,0.4)]
+          className="w-full h-full  relative overflow-hidden bg-[#ffffff13] dark:bg-[#1a244113] backdrop-blur-[5px] flex justify-between px-[20px] items-center rounded-[20px]  shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)]  "
         >
           <div className="z-10">
             <span className="font-black text-black dark:text-white  text-[24px]">

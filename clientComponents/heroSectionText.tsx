@@ -3,26 +3,17 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay } from "swiper/modules";
+
 import { bulbImage } from "@/public";
 
 import ThemeSwitcher from "@/clientComponents/themeChanger";
 
 const HERO_TEXT = () => {
-  const [showText, setShowText] = useState(0);
-
-  useEffect(() => {
-    const updateTextAuto = () => {
-      if (showText === 140) {
-        setShowText(0);
-        return;
-      }
-      setShowText((showText) => showText + 70);
-    };
-    const interval = setInterval(() => {
-      updateTextAuto();
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [showText]);
 
   return (
     <>
@@ -64,28 +55,32 @@ const HERO_TEXT = () => {
               <span>who</span>
             </div>
             <div className="text-left h-[76px] overflow-hidden">
-              <div
-                className={`-translate-y-[${showText}px] duration-200 dark:text-[#5900ff] text-[#e11d48]`}
+              <Swiper
+                slidesPerView={1}
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                className="w-[320px]"
               >
-                <div
-                  className="h-[70px] mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
-                >
-                  <span>Explore!</span>
-                </div>
-                <div
-                  className="h-[70px] mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
-                >
-                  <span>Learn!</span>
-                </div>
-                <div
-                  className="h-[70px] mainText-gradient bg-gradient-to-r
-             from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] "
-                >
-                  <span>Innovate!</span>
-                </div>
-              </div>
+                <SwiperSlide>
+                  <div className="mainText-gradient bg-gradient-to-r from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
+                    <span>Explore!</span>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="mainText-gradient bg-gradient-to-r  from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
+                    <span>Learn!</span>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="mainText-gradient bg-gradient-to-r  from-[#000000] dark:from-[#47f8c9] via-[#5900ff]  via-[25%] dark:via-[#7a6bff] to-[#000000]  to-[120%] dark:to-[#47f8c9] ">
+                    <span>Innovate!</span>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
