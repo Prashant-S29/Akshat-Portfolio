@@ -9,85 +9,87 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import ANIMATED_BUTTON from "@/clientComponents/animatedButton";
 
-const NAVBAR_TWO = () => {
+const NAVBAR = () => {
   return (
     <>
-      <div className="flex justify-between mt-[10px] pb-[10px] px-[18%]">
+      <div className="mt-[10px] flex justify-between px-[18%] pb-[10px]">
         <div className="flex gap-3">
-          <div className="flex gap-1 items-center">
+          <div className="flex items-center gap-1">
             <div>
-              <EmailRoundedIcon className="text-black dark:text-white  text-[20px]" />
+              <EmailRoundedIcon className="text-[20px] text-black  dark:text-white" />
             </div>
             <div>
-              <span className="text-[14px] font-semibold dark:font-medium">
-                me@gamil.com
+              <span className="text-[13px] font-semibold dark:font-medium">
+                khandelwalakshat2002@gmail.com
               </span>
             </div>
           </div>
-          <div className="flex gap-1 items-center">
+          <div className="flex items-center gap-1">
             <div>
-              <PhoneRoundedIcon className="text-black dark:text-white  text-[20px]" />
+              <PhoneRoundedIcon className="text-[20px] text-black  dark:text-white" />
             </div>
             <div>
-              <span className="text-[14px] font-semibold dark:font-medium">
-                +91-9079215052
+              <span className="text-[13px] font-semibold dark:font-medium">
+                +91-7740854960
               </span>
             </div>
           </div>
         </div>
         <div>
           <ul className="flex gap-3 ">
-            <li>
+            <li className="">
               <Link href="">
-                <FacebookIcon className="text-[24px] duration-300" />
+                <FacebookIcon className="text-[24px]  hover:text-blue-500" />
               </Link>
             </li>
-            <li>
+            <li className="">
               <Link href="">
-                <LinkedInIcon className="text-[24px] duration-300" />
+                <InstagramIcon className="text-[24px]  hover:text-pink-500" />
               </Link>
             </li>
-            <li>
+            <li className="">
               <Link href="">
-                <TwitterIcon className="text-[24px] duration-300" />
+                <TwitterIcon className="text-[24px]  hover:text-blue-500" />
               </Link>
             </li>
-            <li>
+            <li className="">
               <Link href="">
-                <InstagramIcon className="text-[24px] duration-300" />
+                <LinkedInIcon className="text-[24px]  hover:text-blue-500" />
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <nav className="w-full z-50 h-[80px]  sticky  top-0  px-[16%]">
-        <div
-          className="w-full h-full  relative overflow-hidden bg-[#ffffff13] dark:bg-[#ffffff13] backdrop-blur-[5px] flex justify-between px-[20px] items-center rounded-[20px]  shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)]  "
-        >
+      <nav className="sticky top-0 z-50  h-[80px]  w-full  px-[16%]">
+        <div className="relative flex  h-full w-full items-center justify-between overflow-hidden rounded-[20px] bg-[#ffffff13] px-[20px] shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)] backdrop-blur-[5px]  dark:bg-[#ffffff13]  ">
           <div className="z-10">
-            <span className="font-black text-black dark:text-white  text-[24px]">
-              A<span className="text-red-500">.</span>K
-            </span>
+            <Link href="/">
+              <span className="text-[24px] font-black text-black  dark:text-white">
+                A<span className="text-red-500">.</span>K
+              </span>
+            </Link>
           </div>
           <div className="z-10">
             <NAVBAR_MENU_D />
           </div>
           <div className="z-10">
-            <Link href="/contact" tabIndex={-1}>
-              <button
-                className="px-[20px] py-[10px] duration-200   bg-[#2662fa]
-                   hover:text-white text-[#ffffff] dark:text-white  rounded-[14px] text-[13px] font-semibold outline-none"
-                tabIndex={-1}
-              >
-                Contact
-              </button>
-            </Link>
-          </div>{" "}
+            {/* <Link href="/contact" tabIndex={-1}> */}
+            <ANIMATED_BUTTON
+              shrink={true}
+              clickEffect={false}
+              uniqueID="myBtnOne"
+              buttonText="Contact"
+              buttonStyle="rounded-[14px] bg-[#2662fa] px-[20px] py-[10px]   text-[13px]
+                   font-semibold text-[#ffffff] outline-none  hover:text-white dark:text-white"
+            />
+            {/* </Link> */}
+          </div>
         </div>
       </nav>
     </>
   );
 };
 
-export default NAVBAR_TWO;
+export default NAVBAR;

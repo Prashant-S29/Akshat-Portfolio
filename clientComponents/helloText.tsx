@@ -24,7 +24,7 @@ const HELLO_TEXT = () => {
         setActiveText((prevIndex) => (prevIndex + 1) % helloText.length);
       }
 
-      if (activeText === helloText.length-1) {
+      if (activeText === helloText.length - 1) {
         setPause(true);
 
         setTimeout(() => {

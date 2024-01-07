@@ -22,13 +22,13 @@ const VERTICAL_SLIDE = ({ textArr }: { textArr: string[] }) => {
 
   return (
     <>
-      <div className="text-[60px] h-[70px] overflow-hidden  ">
+      <div className="h-[70px] overflow-hidden text-[60px]  ">
         {textArr.map((text, index) => (
           <div key={index} className="flex">
             {text.split("").map((char, index) => (
               <span
                 key={index}
-                className={`duration-300 text-[#001aff] dark:text-[#ff00d4]  `}
+                className={`text-[#001aff] duration-300 dark:text-[#ff00d4]  `}
                 style={{
                   transform: `translateY(-${showText}px)`,
                   transitionDelay: `${index * 30}ms`,

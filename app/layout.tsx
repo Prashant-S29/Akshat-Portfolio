@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Montserrat, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
+import NAVBAR from "@/components/navbar";
 import FOOTER from "@/components/footer";
+import CURSOR from "@/clientComponents/cursor";
 
 import Theme_Provider from "@/clientComponents/themeProvider";
 import ThemeSwitcherTwo from "@/clientComponents/themeChangerTwo";
-import NAVBAR_TWO from "@/components/navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 export const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
@@ -24,12 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} bg-white dark:bg-[#0f051d] text-black dark:text-white`}
+        className={`${montserrat.className} bg-white text-black dark:bg-[#0f051d] dark:text-white`}
       >
         <Theme_Provider>
-          <ThemeSwitcherTwo/>
+          <ThemeSwitcherTwo />
           <div>
-            <NAVBAR_TWO />
+            <CURSOR />
+            <NAVBAR />
             {children}
             <FOOTER />
           </div>

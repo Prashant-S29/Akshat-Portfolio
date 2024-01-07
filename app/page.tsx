@@ -21,17 +21,17 @@ const HOME = () => {
   return (
     <>
       <div>
-        <div className="absolute top-0 w-full -z-50 opacity-20">
+        <div className="absolute top-0 -z-50 w-full opacity-20">
           <Image
             src={background}
             alt="background"
             className=" w-full  object-cover"
           />
         </div>
-        <div className="w-full min-h-[70vh] flex justify-center pt-[80px] px-[20px] ">
+        <div className="flex min-h-[70vh] w-full justify-center px-[20px] pt-[80px] ">
           <HERO_TEXT />
         </div>
-        <div className="w-full  flex justify-evenly items-center mt-[50px] px-[20px] ">
+        <div className="mt-[50px]  flex w-full items-center justify-evenly px-[20px] ">
           <MAIN_PHOTO />
           <MAIN_TEXT />
         </div>

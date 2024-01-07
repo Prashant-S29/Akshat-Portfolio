@@ -16,7 +16,7 @@ const NAVBAR_MENU_D = () => {
     <>
       <div className="flex items-center">
         <div>
-          <ul className="flex gap-[6px] text-[13px] navbarMenu-gradient  py-[10px] px-[7px] rounded-full">
+          <ul className="flex gap-[6px] text-[13px] bg-[#2662fa]  py-[10px] px-[7px] rounded-full">
             {navMenuLinks.map((navLinkDetail, index) => (
               <li key={index}>
                 <Link
@@ -37,7 +37,8 @@ const NAVBAR_MENU_D = () => {
                   {pathName === navLinkDetail.href && (
                     <motion.div
                       layoutId="active-link"
-                      className="bg-white inset-0 rounded-full w-full absolute"
+                      className="bg-white inset-0 w-full absolute"
+                      style={{borderRadius: "9999px",}}
                     />
                   )}
                   <span className="relative z-10">{navLinkDetail.text}</span>
