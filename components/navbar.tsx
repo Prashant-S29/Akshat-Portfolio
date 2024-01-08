@@ -63,7 +63,7 @@ const NAVBAR = () => {
         </div>
       </div>
       <nav className="sticky top-0 z-50  h-[80px]  w-full  px-[16%]">
-        <div className="relative flex  h-full w-full items-center justify-between overflow-hidden rounded-[20px]  px-[20px] shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)] backdrop-blur-[5px]  ">
+        <div className="relative flex  h-full w-full items-center justify-between bg-[#ffffff1d] overflow-hidden rounded-[20px]  px-[20px] shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)] backdrop-blur-[5px]  ">
           <div className="z-10">
             <Link href="/">
               <span className="text-[24px] font-black mix-blend-difference ">
