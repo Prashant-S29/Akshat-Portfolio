@@ -6,8 +6,10 @@ import Image from "next/image";
 import MAIN_PHOTO from "@/clientComponents/mainPhoto";
 import MAIN_TEXT from "@/components/mainText";
 
-import { background } from "@/public";
 import HERO_TEXT from "@/components/heroSectionText";
+import BACKGROUND_IMAGE from "@/clientComponents/backgroundImage";
+import WORK from "@/clientComponents/work";
+import TAG_PARA from "@/clientComponents/tagParagraph";
 
 const HOME = () => {
   useEffect(() => {
@@ -21,13 +23,11 @@ const HOME = () => {
   return (
     <>
       <div>
-        <div className="absolute top-0 -z-50 w-full opacity-20">
-          <Image
-            src={background}
-            alt="background"
-            className=" w-full  object-cover"
-          />
+        <div className="absolute left-0 top-0 -z-50 w-full overflow-hidden">
+          <BACKGROUND_IMAGE />
         </div>
+        <div className=" fixed left-0 top-0 -z-40 h-[200px] w-full bg-gradient-to-b from-white to-[90%] duration-300 dark:from-[#0f051d]" />
+        <div className=" absolute bottom-0 left-0 -z-40 h-[200px] w-full bg-gradient-to-t from-white to-[#0f051d00] to-[90%] duration-300 dark:from-[#0f051d]" />
         <div className="flex min-h-[70vh] w-full justify-center px-[20px] pt-[80px] ">
           <HERO_TEXT />
         </div>
@@ -35,13 +35,14 @@ const HOME = () => {
           <MAIN_PHOTO />
           <MAIN_TEXT />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        {/* <div className="mt-[50px]">
+          <WORK />
+        </div> */}
+        <div className="mt-[120px] px-[20px]">
+          <TAG_PARA />
+        </div>
+        <div className="w-full h-[50vh]" />
+
       </div>
     </>
   );

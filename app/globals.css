@@ -73,17 +73,16 @@ html {
   z-index: 10;
   pointer-events: none;
   animation: glow 0.5s linear infinite;
-  transform: translateX(-50%)  translateY(-50%);
-
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @keyframes glow {
-  0%{
+  0% {
     width: 0px;
     height: 0px;
     opacity: 1;
   }
-  100%{
+  100% {
     width: 200px;
     height: 200px;
     opacity: 0;
