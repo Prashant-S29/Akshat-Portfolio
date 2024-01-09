@@ -135,9 +135,9 @@ const INTROPAGE = ({ children }: { children: ReactElement }) => {
             </span>
           </div>
         </div>
-        <div className="absolute  bottom-[50px]  flex h-[25px] w-full cursor-pointer overflow-hidden ">
+        <div className="absolute  bottom-[50px]  flex h-[25px] w-full  overflow-hidden ">
           <div
-            className=" flex w-full justify-end bg-black text-white duration-300 dark:bg-white dark:text-black"
+            className=" flex w-full justify-end bg-black text-white cursor-pointer duration-300 dark:bg-white dark:text-black"
             style={{
               transform: showButton ? "translateY(0px)" : "translateY(28px)",
             }}
