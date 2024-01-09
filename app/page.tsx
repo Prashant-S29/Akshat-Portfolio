@@ -35,15 +35,15 @@ const HOME = () => {
           <MAIN_PHOTO />
           <MAIN_TEXT />
         </div>
-        {/* <div className="mt-[50px]">
-          <WORK />
-        </div> */}
+        {/* <div className="mt-[50px]"> */}
+        {/* </div> */}
         <div className="mt-[120px] px-[20px]">
           <TAG_PARA />
         </div>
-        <div className="w-full h-[50vh]" />
-
       </div>
+      {/* <div className="h-[50vh] w-full" /> */}
+      <WORK />
+      <div className="h-[50vh] w-full" />
     </>
   );
 };

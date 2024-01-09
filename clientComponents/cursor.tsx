@@ -28,14 +28,14 @@ const CURSOR = () => {
       <motion.div
         animate={{ x: cursorPosition.x - 20, y: cursorPosition.y - 20 }}
         transition={{ type: "tween", ease: "backOut" }}
-        className={` pointer-events-none fixed left-0 top-0 z-[99999] aspect-square w-[40px] rounded-full border-[1px] 
-        border-orange-500 mix-blend-difference duration-150 `}
+        className={` pointer-events-none fixed left-0 top-0  z-[99999] aspect-square w-[40px] rounded-full border-[1px] border-orange-500 
+         mix-blend-difference duration-150 `}
       />
       <motion.div
         animate={{ x: cursorPosition.x - 4, y: cursorPosition.y - 4 }}
         transition={{ type: "tween", ease: "backOut" }}
-        className={` pointer-events-none fixed left-0 top-0 z-[99999] aspect-square w-[8px] rounded-full
-         bg-orange-500 mix-blend-difference duration-300`}
+        className={` pointer-events-none fixed left-0 top-0  z-[99999] aspect-square w-[8px] rounded-full bg-orange-500
+          mix-blend-difference duration-300`}
       />
     </>
   );

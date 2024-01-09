@@ -88,3 +88,16 @@ html {
     opacity: 0;
   }
 }
+
+.lineLoader {
+  animation: loader 4.5s linear 1;
+}
+
+@keyframes loader {
+  0%{
+    width: 550px;
+  }
+  100%{
+    width: 0;
+  }
+}

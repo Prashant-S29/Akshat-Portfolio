@@ -60,21 +60,25 @@ const HERO_TEXT = () => {
           </span>
         </div>
         <div className="mt-[30px] flex items-center justify-center gap-[50px]">
-          <ANIMATED_BUTTON
-            shrink={true}
-            clickEffect={true}
-            uniqueID="myBtnTwo"
-            buttonText="Learn & Grow"
-            buttonStyle=" rounded-[14px] bg-[#2662fa] px-[20px] py-[12px] text-[14px] font-bold text-white"
-          />
-          <ANIMATED_BUTTON
-            shrink={true}
-            clickEffect={true}
-            uniqueID="myBtnThree"
-            buttonText="Explore &nbsp;&rarr;"
-            buttonStyle="rounded-[14px] border-[2px] border-[#2662fa] px-[20px] py-[10px] text-[14px] font-bold
+          <div>
+            <ANIMATED_BUTTON
+              shrink={true}
+              clickEffect={true}
+              uniqueID="myBtnTwo"
+              buttonText="Learn & Grow"
+              buttonStyle=" rounded-[14px] bg-[#2662fa] px-[20px] py-[12px] text-[14px] font-bold text-white"
+            />
+          </div>
+          <div>
+            <ANIMATED_BUTTON
+              shrink={true}
+              clickEffect={true}
+              uniqueID="myBtnThree"
+              buttonText="Explore &nbsp;&rarr;"
+              buttonStyle="rounded-[14px] border-[2px] border-[#2662fa] px-[20px] py-[10px] text-[14px] font-bold
            text-[#2662fa]  dark:text-white"
-          />
+            />
+          </div>
         </div>
       </div>
     </>

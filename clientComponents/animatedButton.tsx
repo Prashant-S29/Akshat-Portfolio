@@ -49,13 +49,13 @@ const ANIMATED_BUTTON = ({
     <>
       <div>
         <button
-          id={uniqueID}
           className={`${buttonStyle} ${
             shrink && isButtonClicked ? "scale-95" : ""
           } relative flex items-center justify-center overflow-hidden duration-100`}
           onClick={handleButtonClick}
         >
           {buttonText}
+          <div id={uniqueID}></div>
         </button>
       </div>
     </>

@@ -5,23 +5,25 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import SOCIAL_ICONS from "@/clientComponents/socialIcons";
 
 const FOOTER = () => {
   return (
     <>
-      <div className="w-full border-t-[1px] flex justify-between border-t-gray-400 py-[60px] px-[80px]">
+      <div className="flex w-full justify-between border-t-[1px] border-t-gray-400 px-[80px] py-[60px]">
         <div>
           <div className="leading-tight">
-            <span className="font-black text-[22px]">@Akshat Khandelwal</span>
+            <span className="text-[22px] font-black">@Akshat Khandelwal</span>
           </div>
-          <div className="w-[300px] leading-tight my-[15px]">
+          <div className="my-[15px] w-[300px] leading-tight">
             <span className="text-[14px] text-gray-500">
               Join my Social channels or follow me on Twitter keep up to date
               with my latest work and announcements.
             </span>
           </div>
           <div>
-            <ul className="flex gap-3">
+            <SOCIAL_ICONS />
+            {/* <ul className="flex gap-3">
               <li>
                 <Link href="">
                   <FacebookIcon />
@@ -42,10 +44,10 @@ const FOOTER = () => {
                   <TwitterIcon />
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
-        <div className="flex gap-[150px] mr-[100px]">
+        <div className="mr-[100px] flex gap-[150px]">
           <div>
             <div>
               <span className="font-bold">Quick Links</span>

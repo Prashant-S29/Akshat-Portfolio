@@ -8,6 +8,8 @@ import CURSOR from "@/clientComponents/cursor";
 
 import Theme_Provider from "@/clientComponents/themeProvider";
 import ThemeSwitcherTwo from "@/clientComponents/themeChangerTwo";
+import ErrorBoundary from "@/errorBoundry";
+import INTROPAGE from "@/clientComponents/introPage";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 export const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
@@ -27,15 +29,21 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} bg-white text-black dark:bg-[#0f051d] dark:text-white`}
       >
-        <Theme_Provider>
-          <ThemeSwitcherTwo />
-          <div>
-            <CURSOR />
-            <NAVBAR />
-            {children}
-            <FOOTER />
-          </div>
-        </Theme_Provider>
+        <ErrorBoundary>
+          <Theme_Provider>
+            <INTROPAGE>
+              <div>
+                <ThemeSwitcherTwo />
+                <div>
+                  <CURSOR />
+                  <NAVBAR />
+                  {children}
+                  <FOOTER />
+                </div>
+              </div>
+            </INTROPAGE>
+          </Theme_Provider>
+        </ErrorBoundary>
       </body>
     </html>
   );
