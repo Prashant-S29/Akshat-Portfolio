@@ -135,16 +135,14 @@ const INTROPAGE = ({ children }: { children: ReactElement }) => {
             </span>
           </div>
         </div>
-        <div
-          className="absolute  bottom-[50px]  flex h-[25px] w-full cursor-pointer overflow-hidden "
-          onClick={() => {
-            setShowIntroPage(true);
-          }}
-        >
+        <div className="absolute  bottom-[50px]  flex h-[25px] w-full cursor-pointer overflow-hidden ">
           <div
             className=" flex w-full justify-end bg-black text-white duration-300 dark:bg-white dark:text-black"
             style={{
               transform: showButton ? "translateY(0px)" : "translateY(28px)",
+            }}
+            onClick={() => {
+              setShowIntroPage(true);
             }}
           >
             <Marquee autoFill direction="right">
