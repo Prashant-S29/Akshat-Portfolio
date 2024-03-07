@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <ErrorBoundary>
           <Theme_Provider>
-            <INTROPAGE>
+            {/* <INTROPAGE> */}
               <div>
                 <ThemeSwitcherTwo />
                 <div>
@@ -41,7 +41,7 @@ export default function RootLayout({
                   <FOOTER />
                 </div>
               </div>
-            </INTROPAGE>
+            {/* </INTROPAGE> */}
           </Theme_Provider>
         </ErrorBoundary>
       </body>

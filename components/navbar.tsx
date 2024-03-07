@@ -1,3 +1,4 @@
+
 import React from "react";
 import Link from "next/link";
 
@@ -12,6 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import ANIMATED_BUTTON from "@/clientComponents/animatedButton";
 
 const NAVBAR = () => {
+
   return (
     <>
       <div className="mt-[10px] flex justify-between px-[18%] pb-[10px]">
@@ -62,15 +64,14 @@ const NAVBAR = () => {
           </ul>
         </div>
       </div>
-      <nav className="sticky top-0 z-50  h-[80px]  w-full  px-[16%]">
-        <div className="relative flex  h-full w-full items-center justify-between bg-[#ffffff1d] overflow-hidden rounded-[20px]  px-[20px] shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)] backdrop-blur-[5px]  ">
-        {/* <div
-          className="relative flex  h-full w-full items-center justify-between overflow-hidden rounded-[20px]  px-[20px] 
-        backdrop-blur-[5px]  "
-        > */}
+      <nav className="sticky top-[15px] z-50  h-[80px]  w-full  px-[16%]">
+        <div
+          className={`relative flex h-full  w-full items-center justify-between overflow-hidden rounded-[20px] bg-[#ffffff1d]
+          px-[20px] shadow-[0_0px_30px_-15px_rgba(0,0,0,0.4)] backdrop-blur-[5px]`}
+        >
           <div className="z-10">
             <Link href="/">
-              <span className="text-[24px] font-black mix-blend-difference ">
+              <span className="text-[24px] font-black ">
                 A<span className="text-red-500">.</span>K
               </span>
             </Link>
@@ -79,7 +80,6 @@ const NAVBAR = () => {
             <NAVBAR_MENU_D />
           </div>
           <div className="z-10">
-            {/* <Link href="/contact" tabIndex={-1}> */}
             <ANIMATED_BUTTON
               shrink={true}
               clickEffect={false}
@@ -88,7 +88,6 @@ const NAVBAR = () => {
               buttonStyle="rounded-[14px] bg-[#2662fa] px-[20px] py-[10px]   text-[13px]
                    font-semibold text-[#ffffff] outline-none  hover:text-white dark:text-white"
             />
-            {/* </Link> */}
           </div>
         </div>
       </nav>
